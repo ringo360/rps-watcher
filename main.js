@@ -1,6 +1,7 @@
 const express = require('express');
-
 const app = express();
+
+const port = 8101
 
 let rps = 0;
 
@@ -10,8 +11,8 @@ app.get(/(.*)/, (req, res) => {
 	rps++;
 })
 
-app.listen(3000, () => {
-  console.log('listening port 3000');
+app.listen(port, () => {
+  console.log(`listening port ${port}`);
   rpsdisplay();
 });
 
